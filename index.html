@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!—
+* Code for University of Strathclyde Mobile App Development.
+* Developed by Nathan Goutcher 2020.
+*
+* Code confidential to developer and course examiners.
+*
+* Main index file for webpage
+-->
+
+<html lang="en" manifest="offline.appcache">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <title>Nathan Goutcher's Currency Converter</title>
+
+    <link rel="icon" sizes="192x192" href="icon.png"/>
+    <link rel="apple-touch-icon" href="icon.png"/>
+    <link rel="shortcut icon" href="weeicon.png" type="image/x-icon"/>
+
+    <link rel="stylesheet" type="text/css" href="normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="converter.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div id="imgDiv">
+        <img src="hamburger-white.png" alt="menu icon" height="50rem" width="50rem" id="menuIcon"/>
+    </div>
+
+    <div id="title">
+        Travel Quick Converter
+    </div>
+</header>
+<main>
+    <div class="grid-layout-wrapper">
+            <div id="menuOptions">
+                    <img src="close.png" alt="close" height="50rem" width="50rem" id="closeMenuIcon"/>
+                    <div class="currOptionItem">
+                        <label for="srcCur">Visiting Currency</label><br>
+                        <select id="srcCur">
+                            <option value="eur" selected>&#127466&#127482 EUR</option>
+                            <option value="usd">&#127482&#127480 USD</option>
+                            <option value="jpy">&#127471&#127477 JPY</option>
+                            <option value="bgn">&#127463&#127468 BGN</option>
+                            <option value="czk">&#127464&#127487 CZK</option>
+                            <option value="dkk">&#127465&#127472 DKK</option>
+                            <option value="gbp">&#127468&#127463 GBP</option>
+                            <option value="huf">&#127469&#127482 HUF</option>
+                            <option value="pln">&#127477&#127473 PLN</option>
+                            <option value="ron">&#127479&#127476 RON</option>
+                            <option value="sek">&#127480&#127466 SEK</option>
+                            <option value="chf">&#127464&#127469 CHF</option>
+                            <option value="isk">&#127470&#127480 ISK</option>
+                            <option value="nok">&#127475&#127476 NOK</option>
+                            <option value="hrk">&#127469&#127479 HRK</option>
+                            <option value="rub">&#127479&#127482 RUB</option>
+                            <option value="try">&#127481&#127479 TRY</option>
+                            <option value="aud">&#127462&#127482 AUD</option>
+                            <option value="brl">&#127463&#127479 BRL</option>
+                            <option value="cad">&#127464&#127462 CAD</option>
+                            <option value="cny">&#127464&#127475 CNY</option>
+                            <option value="hkd">&#127469&#127472 HKD</option>
+                            <option value="idr">&#127470&#127465 IDR</option>
+                            <option value="ils">&#127470&#127473 ILS</option>
+                            <option value="krw">&#127472&#127479 KRW</option>
+                            <option value="mxn">&#127474&#127485 MXN</option>
+                            <option value="myr">&#127474&#127486 MYR</option>
+                            <option value="nzd">&#127475&#127487 NZD</option>
+                            <option value="php">&#127477&#127469 PHP</option>
+                            <option value="sgd">&#127480&#127468 SGD</option>
+                            <option value="thb">&#127481&#127469 THB</option>
+                            <option value="zar">&#127487&#127462 ZAR</option>
+                        </select>
+                    </div>
+                    <div class="currOptionItem">
+                        <label for="destCur">Home Currency</label><br>
+                        <select id="destCur">
+                            <option value="eur">&#127466&#127482 EUR</option>
+                            <option value="usd" selected>&#127482&#127480 USD</option>
+                            <option value="jpy">&#127471&#127477 JPY</option>
+                            <option value="bgn">&#127463&#127468 BGN</option>
+                            <option value="czk">&#127464&#127487 CZK</option>
+                            <option value="dkk">&#127465&#127472 DKK</option>
+                            <option value="gbp">&#127468&#127463 GBP</option>
+                            <option value="huf">&#127469&#127482 HUF</option>
+                            <option value="pln">&#127477&#127473 PLN</option>
+                            <option value="ron">&#127479&#127476 RON</option>
+                            <option value="sek">&#127480&#127466 SEK</option>
+                            <option value="chf">&#127464&#127469 CHF</option>
+                            <option value="isk">&#127470&#127480 ISK</option>
+                            <option value="nok">&#127475&#127476 NOK</option>
+                            <option value="hrk">&#127469&#127479 HRK</option>
+                            <option value="rub">&#127479&#127482 RUB</option>
+                            <option value="try">&#127481&#127479 TRY</option>
+                            <option value="aud">&#127462&#127482 AUD</option>
+                            <option value="brl">&#127463&#127479 BRL</option>
+                            <option value="cad">&#127464&#127462 CAD</option>
+                            <option value="cny">&#127464&#127475 CNY</option>
+                            <option value="hkd">&#127469&#127472 HKD</option>
+                            <option value="idr">&#127470&#127465 IDR</option>
+                            <option value="ils">&#127470&#127473 ILS</option>
+                            <option value="krw">&#127472&#127479 KRW</option>
+                            <option value="mxn">&#127474&#127485 MXN</option>
+                            <option value="myr">&#127474&#127486 MYR</option>
+                            <option value="nzd">&#127475&#127487 NZD</option>
+                            <option value="php">&#127477&#127469 PHP</option>
+                            <option value="sgd">&#127480&#127468 SGD</option>
+                            <option value="thb">&#127481&#127469 THB</option>
+                            <option value="zar">&#127487&#127462 ZAR</option>
+                        </select>
+                    </div>
+                    <div class="currOptionItem">
+                        <label for="bankFee">Add a bank fee?</label><br>
+                        <select id="bankFee">
+                            <option value="1" selected>0%</option>
+                            <option value="1.02">2%</option>
+                            <option value="1.04">4%</option>
+                            <option value="1.06">6%</option>
+                        </select>
+                    </div>
+                    <div class="currOptionItem">
+                        <label for="remember">Remember options?</label><br>
+                        <input type="checkbox" id="remember"/>
+                    </div>
+                <div class="currOptionItem">
+                    <button id="applyButton">Apply</button>
+                </div>
+            </div>
+        <div class="grid-layout-item1">
+            <h1 id="display">0</h1>
+        </div>
+        <div class="button-grid-container grid-layout-item2">
+            <div class="button-grid-item"><button id="button7" value="7">7</button></div>
+            <div class="button-grid-item"><button id="button8" value="8">8</button></div>
+            <div class="button-grid-item"><button id="button9" value="9">9</button></div>
+            <div class="button-grid-item"><button id="button4" value="4">4</button></div>
+            <div class="button-grid-item"><button id="button5" value="5">5</button></div>
+            <div class="button-grid-item"><button id="button6" value="6">6</button></div>
+            <div class="button-grid-item"><button id="button1" value="1">1</button></div>
+            <div class="button-grid-item"><button id="button2" value="2">2</button></div>
+            <div class="button-grid-item"><button id="button3" value="3">3</button></div>
+            <div class="button-grid-item"><button id="buttonClear" value="clear">c</button></div>
+            <div class="button-grid-item"><button id="button0" value="0">0</button></div>
+            <div class="button-grid-item"><button id="buttonEquals" value="eq">=</button></div>
+        </div>
+    </div>
+</main>
+<footer>Developed by Nathan Goutcher</footer>
+<script src="ConverterModel.js"></script>
+<script src="ConverterView.js"></script>
+<script src="ConverterController.js"></script>
+</body>
+</html>
